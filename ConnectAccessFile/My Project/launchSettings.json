@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConnectAccessFile": {
+      "commandName": "Project",
+      "commandLineArgs": "W:\\判定管理_DATA.accdb 220841"
+    }
+  }
+}
