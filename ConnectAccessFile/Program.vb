@@ -1,3 +1,25 @@
+'====================================================================================================
+'
+'   Accessファイルに接続し、データを読み取りコンソールに表示するプログラム
+'       
+'       ConnectAccessFile.exe 引数1 引数2
+'
+'           引数1：判定管理_DATA.accdbのPath
+'           引数2：判定受付番号
+'
+'           出力：データテーブルのリスト（カンマ区切りテキスト）
+
+'                   JUTAKU_NO, JUTAKU_NO_EDA, MemberID, HA_Data_KUBUN, HA_Number, HA_Select_Date, HA_JISSI_Date
+'                   220841,1,155,1,2,20221104,20221108
+'                   220841,1,155,1,2,20221104,20221109
+'                   220841,1,157,1,1,20221104,20221110
+'                   220841,2,157,1,2,20221104,20221108
+'                   220841,2,157,1,2,20221104,20221109
+'                   220841,2,155,1,1,20221104,20221110
+'
+'====================================================================================================
+
+
 Imports System
 Imports System.Data
 Imports System.Data.OleDb
@@ -13,7 +35,6 @@ Module Program
 
         API1.FilePath = Path
 
-        'Dim sql As String = "SELECT * FROM T_HANTEI_RIREKI WHERE JUTAKU_NO = '230898'"
         Dim sql As String = "SELECT * FROM T_HANTEI_RIREKI WHERE JUTAKU_NO = '" + gbrcNo + "'"
 
         Dim resultDt As DataTable = API1.GetTableData(sql)

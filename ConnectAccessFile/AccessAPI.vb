@@ -23,11 +23,7 @@ Public Class AccessAPI
 
         If sql <> "" And _FilePath <> "" Then
             Dim resultDt As New DataTable
-            'Dim sql = New System.Text.StringBuilder()
-            'sql.AppendLine("SELECT")
-            'sql.AppendLine("  *")
-            'sql.AppendLine("FROM T_HANTEI_RIREKI")
-            'sql.AppendLine(" WHERE JUTAKU_NO = '230898'")
+
 
             'Access接続準備
             Dim command As New OleDbCommand
